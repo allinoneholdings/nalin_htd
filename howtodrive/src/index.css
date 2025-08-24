@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary: rgb(255, 200, 0);
+  --color-primary-dull: rgb(255, 157, 0);
+  --color-secondary: rgb(16, 16, 28);
+}
+
+body{
+  /* color: rgb(190, 255, 252); */
+  color: white;
+  background-color: rgb(16, 16, 28);
+  padding-top: 8rem;
+}
