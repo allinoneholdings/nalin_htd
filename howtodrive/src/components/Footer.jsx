@@ -8,10 +8,10 @@ const Footer = () => {
     const googleMapsApiKey = 'YOUR_GOOGLE_MAPS_API_KEY'; // Replace with your actual API key
 
   return (
-    <footer className="px-6 pt-8 md:px-16 lg:px-36 w-full text-gray-300">
+    <footer className="px-6 pt-8 mt-20 md:px-16 lg:px-36 w-full text-gray-300">
             <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500 pb-10">
                 <div className="md:max-w-96">
-                    <img alt="" className="h-11" src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/prebuiltuiLogoSquareShape.svg" />
+                    <img alt="" className="h-11" src="http://howtodrive.lk/images/Logo.jpg" />
                     <p className="mt-6 text-sm">
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </p>
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
                 
                 <div className="flex-1 flex items-start md:justify-end gap-20 md:gap-40">
-                    <div style={{ width: '140px', height: '140px' }}> {/* Adjust dimensions as needed */}
+                    <div style={{ width: '140px', height: '140px' }}>
                         <h2 className="font-semibold mb-5">Location</h2>
                         <MapComponent apiKey={googleMapsApiKey} center={mapCenter} zoom={mapZoom} />
                     </div>

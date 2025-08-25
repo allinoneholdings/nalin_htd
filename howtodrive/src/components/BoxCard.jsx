@@ -16,7 +16,7 @@ const BoxCard = ({ number, title }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
-      className="relative w-56 h-64 rounded-xl p-1 bg-gray-900 backdrop-blur-md text-gray-800 overflow-hidden shadow-md cursor-pointer"
+      className="relative w-45 h-45 rounded-xl p-1 bg-gray-900 backdrop-blur-md text-gray-800 overflow-hidden shadow-md cursor-pointer"
     >
       <div
         className={`pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-300 absolute z-0 transition-opacity duration-500 ${
