@@ -37,7 +37,7 @@ const Home = () => {
 
   const numbers = [
     { number: 20, title: 'SIMULATOR LESSONS' },
-    { number: 20, title: 'DRIVING HOURS' },
+    { number: 20, title: `DRIVING HOURS` },
     { number: 10, title: 'THEORY LESSONS' },
     { number: 100, title: 'PERCENT PASS RATE' },
   ]

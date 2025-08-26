@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../components/Card'
 import { useNavigate } from 'react-router'
 
 const Services = () => {
+
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("all");
   const navigate = useNavigate();
   
   const license = [
@@ -44,6 +47,12 @@ const Services = () => {
     },
   ]
 
+  const filteredData = license.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase());
+    const matchesFilter = filter === "all" || item.title.toLowerCase().includes(filter);
+    return matchesSearch && matchesFilter;
+  });
+
   return (
     <>
       <div className='flex flex-col items-center pt-12 px-6 lg:px-20'>
@@ -56,17 +65,43 @@ const Services = () => {
           </p>
         </div>
 
+        <div className="flex flex-col md:flex-row items-center gap-4 mt-8 w-full md:w-2/3">
+          <input
+            type="text"
+            placeholder="Search a course..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="flex-1 px-4 py-2 rounded-xl bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="px-4 py-2 rounded-xl bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <option value="all">All</option>
+            <option value="car">Cars</option>
+            <option value="dual">Dual Purpose</option>
+            <option value="cycle">Motor Cycle</option>
+            <option value="lorry">Lorry / Coach</option>
+            <option value="special">Special</option>
+          </select>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full">
-          {license.map((item, index) => (
-            <div key={index}>
-              <Card
-                title={item.title}
-                image={item.image}
-                description={item.description}
-                route={item.route}
-              />
-            </div>
-          ))}
+          {filteredData.length > 0 ? (
+            filteredData.map((item, index) => (
+              <div key={index}>
+                <Card
+                  title={item.title}
+                  image={item.image}
+                  description={item.description}
+                  route={item.route}
+                />
+              </div>
+            ))
+          ) : (
+            <p className="text-gray-400 col-span-3 text-center">No matching courses found.</p>
+          )}
         </div>
       </div>
 

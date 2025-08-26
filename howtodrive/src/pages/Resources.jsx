@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Resources = () => {
+
+  const navigate = useNavigate();
+
   const simulators = [
     {
       title: "Simulator 1 - Driving Simulator",
@@ -77,7 +81,7 @@ const Resources = () => {
               <h3 className="font-bold text-lg text-primary mb-2">
                 {simulator.title}
               </h3>
-              <p className="text-gray-300 text-sm flex-1">{simulator.description}</p>
+              <p className="text-gray-300 text-sm flex-1 text-justify">{simulator.description}</p>
             </div>
           ))}
         </div>
@@ -128,12 +132,24 @@ const Resources = () => {
               />
               <div className="md:w-1/2">
                 <h3 className="font-bold text-xl text-primary mb-3">{item.title}</h3>
-                <p className="text-gray-300">{item.description}</p>
+                <p className="text-gray-300 text-justify">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
+
+      <div className="text-center py-12 bg-blue-950/40">
+        <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">
+          Ready to experience our world-class training?
+        </h3>
+        <button 
+          onClick={() => {navigate('/application'); window.scrollTo(0,0);}}
+          className="px-6 py-3 bg-primary hover:bg-primary-dull/80 text-black font-semibold rounded-xl shadow-lg transition duration-300"
+        >
+          Contact Us Today
+        </button>
+      </div>
     </div>
   );
 };
