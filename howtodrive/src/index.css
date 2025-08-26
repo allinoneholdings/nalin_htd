@@ -1,15 +1,44 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   --color-primary: rgb(255, 200, 0);
   --color-primary-dull: rgb(255, 157, 0);
   --color-secondary: rgb(16, 16, 28);
 }
 
-body{
-  /* color: rgb(190, 255, 252); */
+body {
   color: white;
-  background-color: rgb(16, 16, 28);
-  /* background-color: #110133; */
-  padding-top: 8rem;
+  background-color: var(--color-secondary);
+  padding-top: 6rem;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes zoomFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-zoomFade {
+  animation: zoomFade 1.5s ease-in-out;
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1.2s ease-out;
 }

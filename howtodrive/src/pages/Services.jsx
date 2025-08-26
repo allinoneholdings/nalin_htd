@@ -1,7 +1,10 @@
 import React from 'react'
 import Card from '../components/Card'
+import { useNavigate } from 'react-router'
 
 const Services = () => {
+  const navigate = useNavigate();
+  
   const license = [
     {
       title: 'Driving License for Cars - Manual or Auto gear',
@@ -43,43 +46,50 @@ const Services = () => {
 
   return (
     <>
-      <div className='flex flex-col pt-10 px-50'>
-      <div className='mb-10'>
-        <h1 className='text-2xl md:text-3xl font-semibold text-primary text-center mb-10 uppercase'>LET OUR COURSES INSPIRE YOU!</h1>
-        <p className='text-gray-300 py-1'>We have varieties of driving courses which are specifically created for you. Pick suitable driving course on your preference …Our qualified instructors will guide you to achieve the target...</p>
-      </div>
+      <div className='flex flex-col items-center pt-12 px-6 lg:px-20'>
+        <div className='text-center max-w-3xl'>
+          <h1 className='text-3xl md:text-4xl font-bold text-primary mb-4 uppercase'>
+            Let Our Courses Inspire You!
+          </h1>
+          <p className='text-gray-400 text-sm md:text-base leading-relaxed'>
+            We have a variety of driving courses specifically created for you. Pick the suitable driving course based on your preference. Our qualified instructors will guide you every step of the way to achieve your goal.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5 gap-5 justify-between">
-          {
-            license.map((item, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full">
+          {license.map((item, index) => (
+            <div key={index}>
               <Card
-                key={index}
                 title={item.title}
                 image={item.image}
-                 description={item.description}
-                 route={item.route}
+                description={item.description}
+                route={item.route}
               />
-            ))
-          }
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
 
-    <div className="relative flex flex-col items-center my-10 w-full">
+      <div className="relative flex flex-col items-center my-16 w-full">
         <img
-            src="https://static.vecteezy.com/system/resources/thumbnails/007/278/150/small_2x/dark-background-abstract-with-light-effect-vector.jpg"
-            alt="Background"
-            className="w-full h-40 md:h-60 lg:h-72 object-cover rounded-lg"
+          src="https://static.vecteezy.com/system/resources/thumbnails/007/278/150/small_2x/dark-background-abstract-with-light-effect-vector.jpg"
+          alt="Background"
+          className="w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-lg"
         />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <h2 className="text-primary font-bold uppercase text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
-                Are you willing to learn drive? <br/> select Your desired Course Now!
-            </h2>
-            <button className="border rounded-xl px-4 sm:px-6 py-2 sm:py-3 bg-primary hover:bg-primary-dull text-black font-semibold text-sm sm:text-base">Apply Now</button>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <h2 className="text-primary font-extrabold uppercase text-lg sm:text-xl md:text-3xl lg:text-4xl mb-6 drop-shadow-lg">
+            Are you ready to start driving? <br /> Select your course today!
+          </h2>
+          <button 
+            onClick={() => {navigate('/application'); window.scrollTo(0,0);}}
+            className="px-6 py-3 bg-primary hover:bg-primary-dull text-black font-semibold rounded-2xl shadow-lg transition duration-300"
+          >
+            Apply Now
+          </button>
         </div>
       </div>
     </>
-    
   )
 }
 

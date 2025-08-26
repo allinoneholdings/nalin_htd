@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 z-50 w-full flex items-center backdrop-blur bg-black/20 md:bg-black/60 md:border border-gray-600/20 justify-between px-6 md:px-16 lg:px-10 py-5">
-      <NavLink to="/" className="flex items-center max-md:flex-1">
+      <NavLink to="/" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="flex items-center max-md:flex-1">
         <img
           src="http://howtodrive.lk/images/Logo.jpg"
           alt="logo"
@@ -34,54 +34,54 @@ const Navbar = () => {
           <div className="absolute top-full left-0 hidden group-hover:block hover:opacity-100 backdrop-blur bg-black/40 md:bg-black/70 rounded-lg shadow-lg w-48 z-50">
             
             <div className="relative group/item">
-              <NavLink to="/services" className="block px-4 py-2 hover:text-primary">
+              <NavLink to="/services" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                 Driving License for Beginners ▸
               </NavLink>
               <div className="absolute left-full top-0 hidden group-hover/item:block backdrop-blur bg-black/40 md:bg-black/70 rounded-lg shadow-lg w-48">
-                <NavLink to="/manual-auto" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/manual-auto" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Manual and Auto Cars
                 </NavLink>
-                <NavLink to="/dual-purpose" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/dual-purpose" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Dual Purpose
                 </NavLink>
-                <NavLink to="/motor-cycle" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/motor-cycle" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Motor Cycle/ Three Wheeler
                 </NavLink>
-                <NavLink to="/allinone" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/allinone" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   All in One Light
                 </NavLink>
               </div>
             </div>
 
             <div className="relative group/item">
-              <NavLink to="/services" className="block px-4 py-2 hover:text-primary">
+              <NavLink to="/services" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                 Further Driving License ▸
               </NavLink>
               <div className="absolute left-full top-0 hidden group-hover/item:block backdrop-blur bg-black/40 md:bg-black/70 rounded-lg shadow-lg w-48">
-                <NavLink to="/manual-auto" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/manual-auto" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Manual and Auto Cars
                 </NavLink>
-                <NavLink to="/dual-purpose" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/dual-purpose" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Dual Purpose
                 </NavLink>
-                <NavLink to="/motor-cycle" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/motor-cycle" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Motor Cycle/ Three Wheeler
                 </NavLink>
-                <NavLink to="/allinone" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/allinone" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   All in One Light
                 </NavLink>
               </div>
             </div>
 
             <div className="relative group/item">
-              <NavLink to="/services" className="block px-4 py-2 hover:text-primary">
+              <NavLink to="/services" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                 Special Driving Cources ▸
               </NavLink>
               <div className="absolute left-full top-0 hidden group-hover/item:block backdrop-blur bg-black/40 md:bg-black/70 rounded-lg shadow-lg w-48">
-                <NavLink to="/special-course" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/special-course" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Special Driving Cources
                 </NavLink>
-                <NavLink to="/motor-coach" className="block px-4 py-2 hover:text-primary">
+                <NavLink to="/motor-coach" onClick={() => {scrollTo(0,0); setIsOpen(false)}} className="block px-4 py-2 hover:text-primary">
                   Motor Coach & Motor Lorry
                 </NavLink>
               </div>

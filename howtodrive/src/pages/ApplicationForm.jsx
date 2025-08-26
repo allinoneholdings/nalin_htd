@@ -21,88 +21,99 @@ const ApplicationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Form submitted!");
+    navigate("/");
+    window.scrollTo(0, 0);
   };
 
   return (
-    <div className="flex items-center justify-center p-6">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-950 via-black to-gray-800 p-6">
       <form
         onSubmit={handleSubmit}
-        className="bg-blue-950/30 shadow-lg rounded-2xl p-8 w-full max-w-lg space-y-3"
+        className="bg-black/50 backdrop-blur-2xl shadow-2xl rounded-2xl p-10 w-full max-w-xl space-y-6 border border-blue-900/50"
       >
-        <h2 className="text-4xl font-bold text-primary text-center">
+        <h2 className="text-4xl font-extrabold text-primary text-center drop-shadow-lg">
           Application Form
         </h2>
 
         <div>
-          <label className="block text-gray-200 mb-2">Full Name</label>
+          <label className="block text-gray-200 mb-2 font-medium">
+            Full Name
+          </label>
           <input
             type="text"
             name="fullName"
             value={form.fullName}
             onChange={handleChange}
-            className="w-full border rounded-lg p-3 bg-gray-900 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none transition"
             placeholder="Enter your full name"
             required
           />
         </div>
 
         <div>
-          <label className="block text-gray-200 mb-2">Email</label>
+          <label className="block text-gray-200 mb-2 font-medium">Email</label>
           <input
             type="email"
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="w-full border rounded-lg p-3 bg-gray-900 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none transition"
             placeholder="Enter your email"
             required
           />
         </div>
 
         <div>
-          <label className="block text-gray-200 mb-2">Phone Number</label>
+          <label className="block text-gray-200 mb-2 font-medium">
+            Phone Number
+          </label>
           <input
             type="number"
             name="phone"
             value={form.phone}
             onChange={handleChange}
-            className="w-full border rounded-lg p-3 bg-gray-900 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none transition"
             placeholder="Enter your phone number"
             required
           />
         </div>
 
         <div>
-          <label className="block text-gray-200 mb-2">Date of Birth</label>
+          <label className="block text-gray-200 mb-2 font-medium">
+            Date of Birth
+          </label>
           <input
             type="date"
             name="dob"
             value={form.dob}
             onChange={handleChange}
-            className="w-full border rounded-lg p-3 bg-gray-900 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 focus:ring-2 focus:ring-primary focus:outline-none transition"
             required
           />
         </div>
 
         <div>
-          <label className="block text-gray-200 mb-2">Address</label>
+          <label className="block text-gray-200 mb-2 font-medium">Address</label>
           <textarea
             name="address"
             value={form.address}
             onChange={handleChange}
-            className="w-full border rounded-lg p-3 bg-gray-900 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-primary focus:outline-none transition"
             placeholder="Enter your address"
+            rows="3"
             required
           />
         </div>
 
         <div>
-          <label className="block text-gray-200 mb-2">Course Type</label>
+          <label className="block text-gray-200 mb-2 font-medium">
+            Course Type
+          </label>
           <select
             name="course"
             value={form.course}
             onChange={handleChange}
-            className="w-full border bg-gray-900 rounded-lg p-3 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 focus:ring-2 focus:ring-primary focus:outline-none transition"
           >
             <option>Beginner</option>
             <option>Intermediate</option>
@@ -111,12 +122,14 @@ const ApplicationForm = () => {
         </div>
 
         <div>
-          <label className="block text-gray-200 mb-2">Transmission</label>
+          <label className="block text-gray-200 mb-2 font-medium">
+            Transmission
+          </label>
           <select
             name="transmission"
             value={form.transmission}
             onChange={handleChange}
-            className="w-full border bg-gray-900 rounded-lg p-3 focus:ring-2 focus:ring-primary"
+            className="w-full border rounded-lg p-3 bg-gray-900/70 text-gray-100 focus:ring-2 focus:ring-primary focus:outline-none transition"
           >
             <option>Automatic</option>
             <option>Manual</option>
@@ -125,14 +138,13 @@ const ApplicationForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-primary text-black font-semibold py-3 rounded-lg hover:bg-primary-dull transition"
-          onSubmit={() => {navigate('/'); window.scrollTo(0,0);}}
+          className="w-full bg-gradient-to-r from-primary to-primary-dull text-black font-bold py-3 rounded-lg shadow-lg hover:scale-[1.02] transition-transform"
         >
           Submit Application
         </button>
       </form>
     </div>
   );
-}
+};
 
-export default ApplicationForm
+export default ApplicationForm;

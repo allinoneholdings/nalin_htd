@@ -24,12 +24,12 @@ const KidsDriving = () => {
   ]
   return (
     <div className='flex flex-col pt-10 px-50'>
-      <h1 className='text-2xl md:text-3xl font-semibold text-primary text-center mb-10 uppercase'>LET OUR COURSES INSPIRE YOU!</h1>
+      <h1 className='text-2xl md:text-4xl font-semibold text-primary text-center mb-10 uppercase'>LET OUR COURSES INSPIRE YOU!</h1>
       <ol style={{ listStyle: 'disc' }}>
-        <li><p className='text-gray-300 py-1'>Designed exclusively for Kids age (3-15 years) which provides three courses basically covering road rules , road signs, basic first-aid and how to use road in a safe way</p></li>
-        <li><p className='text-gray-300 py-1'>How to drive kids driving program will teach them road signs and traffic signals through various educational activities including multiple choice quizzers and successful rounds in a simulator.</p></li>
-        <li><p className='text-gray-300 py-1'>children can also practice driving on an indoor track designed to international standards and learn basic road safety and other important motor skills in both a classroom and track environment.</p></li>
-        <li><p className='text-gray-300 py-1'>On successful completion of the course the student will be issued a kids driving licence and a certificate from HTD driving school.</p></li>
+        <li><p className='text-gray-300 py-1 text-justify'>Designed exclusively for Kids age (3-15 years) which provides three courses basically covering road rules , road signs, basic first-aid and how to use road in a safe way</p></li>
+        <li><p className='text-gray-300 py-1 text-justify'>How to drive kids driving program will teach them road signs and traffic signals through various educational activities including multiple choice quizzers and successful rounds in a simulator.</p></li>
+        <li><p className='text-gray-300 py-1 text-justify'>children can also practice driving on an indoor track designed to international standards and learn basic road safety and other important motor skills in both a classroom and track environment.</p></li>
+        <li><p className='text-gray-300 py-1 text-justify'>On successful completion of the course the student will be issued a kids driving licence and a certificate from HTD driving school.</p></li>
       </ol>
 
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-5 justify-between">
@@ -48,7 +48,7 @@ const KidsDriving = () => {
 
         <div className="flex flex-col pt-10 items-center justify-center text-center px-4">
             <h2 className="text-primary font-bold uppercase text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4">
-                Are you willing to learn drive? select Your desired Course Now <br/> Contact Us - +94 11278 7800
+                Are you willing to learn drive? select Your desired Course Now <br/> <span className='text-white'>Contact Us - +94 11278 7800</span>
             </h2>
         </div>
     </div>
