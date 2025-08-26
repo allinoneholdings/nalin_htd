@@ -60,9 +60,22 @@ const Resources = () => {
   ];
 
   return (
-    <div className="bg-secondary text-white">
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl md:text-4xl font-semibold text-primary text-center mb-10 uppercase">
+    <div className="bg-secondary pt-12 text-white md:px-20 lg:px-32">
+      <h1 className='text-2xl md:text-4xl font-semibold text-primary text-center mb-10 uppercase'>
+        WHAT WE OFFER
+      </h1>
+      
+      <div className="bg-blue-950/20 p-4 rounded-lg shadow-md mb-6">
+        <p className="text-gray-300 text-lg text-center animate-pulse">
+          Learn smart. Drive safe, Trust the experts
+        </p>
+      </div>
+        <p className='text-gray-300 py-1 text-center'>We offer comprehensive driving courses focused on safety, skill development and confidence on the road.</p>
+        <p className='text-gray-300 py-1 text-center'>Our services are designed to meet the unique needs of each student, ensuring effective and engaging learning.</p>
+        <p className='text-gray-300 py-1 text-center'>Whether you're just starting out or need a refresher, our qualified instructors are here to guide you every step on the way.</p>
+
+      <section className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-2xl md:text-3xl font-semibold text-primary text-center mb-10 uppercase">
           Technological - Simulators
         </h2>
         <hr className="border-primary w-24 mx-auto mb-10" />

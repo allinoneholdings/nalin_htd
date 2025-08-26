@@ -3,7 +3,7 @@ import React from 'react'
 const ManualAuto = () => {
   return (
     <div className="bg-gray-900 min-h-screen text-gray-100 p-6">
-      <h2 className="text-3xl md:text-4xl font-bold mb-5 pt-10 text-primary">
+      <h2 className="text-3xl md:text-4xl font-bold mb-5 pl-6 pt-10 text-primary">
         Special Driving Courses
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 p-6 backdrop-blur-md bg-black/50 rounded-2xl shadow-xl">

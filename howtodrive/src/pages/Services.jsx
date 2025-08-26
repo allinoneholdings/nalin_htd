@@ -47,7 +47,7 @@ const Services = () => {
     },
   ]
 
-  const filteredData = license.filter(item => {
+    const filteredData = license.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(search.toLowerCase());
     const matchesFilter = filter === "all" || item.title.toLowerCase().includes(filter);
     return matchesSearch && matchesFilter;
